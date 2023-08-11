@@ -1,8 +1,8 @@
 # graphqlToolsUtils-printSchemaWithDirectives-reproducer
 
-Reproducer for issue in `@graphql-tools/utils` project's `printSchemaWithDirectives` method.
+Reproducer for issue [#5508](https://github.com/ardatan/graphql-tools/issues/5508) in `@graphql-tools/utils` project's `printSchemaWithDirectives` method.
 
-Problem is that existing schema descriptions modified over schem transformation (eg. using `mapSchema`) are not printed correctly by `printSchemaWithDirectives` as it prefers descriptions from `astNode` instead from schema config object itself. But `astNode` is immutable in transformation, only schema config object can be changed.
+Problem is that existing schema descriptions (for fields, objects etc.) modified over schema transformation (eg. using `mapSchema`) are not printed correctly by `printSchemaWithDirectives` as it prefers descriptions from `astNode` instead from schema config object itself. But `astNode` is immutable in transformation, only schema config object can be changed.
 
 
 ## Requires
